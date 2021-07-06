@@ -74,8 +74,11 @@ int main(int argc, char *argv[]) {
      char *name = argv[2];
      if (!search(fp, name)) {
       printf("no match\n");
+       fclose(fp);
+       exit(1);
     }
      fclose(fp);
+    exit(0);
        /* TBD  */
   
   } 
